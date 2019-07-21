@@ -1,2 +1,2 @@
-export {getRandomElement } from "./getRandomElement";
-export {swapElements } from "./swapElements";
+export { getRandomElement } from "./getRandomElement";
+export { swapElements } from "./swapElements";

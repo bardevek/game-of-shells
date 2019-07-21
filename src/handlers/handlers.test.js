@@ -7,9 +7,9 @@ const fourth = { id: 3 };
 const fifth = { id: 4 };
 
 it("should swap elements in 3 elements array", () => {
-    const initialData = [first, second, third];
-    const resultData = [first, third, second ];
-    expect(swapElements(initialData, third, second)).toStrictEqual(resultData);
+  const initialData = [first, second, third];
+  const resultData = [first, third, second];
+  expect(swapElements(initialData, third, second)).toStrictEqual(resultData);
 });
 
 it("should swap elements in 4 elements array", () => {
