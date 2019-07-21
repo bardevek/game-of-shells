@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Button} from "./StyledComponents";
+import { Button } from "./StyledComponents";
 
 const StartButton = ({ onClick, stage }) => {
   const message = stage === 4 ? "TRY AGAIN" : "START";

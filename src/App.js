@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
 
-import { GameBoard,Header } from "./components";
-import { useOrder,useInitialOrder } from "./hooks";
+import { GameBoard, Header } from "./components";
+import { useOrder, useInitialOrder } from "./hooks";
 
 function App() {
   const [stage, setStage] = useState(0);
@@ -14,22 +14,22 @@ function App() {
   const { order, onStart } = useOrder(initialOrder, setStage);
 
   return (
-      <View>
-        <Header
-            numberOfShells={numberOfShells}
-            onStart={onStart}
-            resultMessage={resultMessage}
-            setNumberOfShells={setNumberOfShells}
-            stage={stage}
-        />
-        <GameBoard
-            currentOrder={order}
-            initialOrder={initialOrder}
-            stage={stage}
-            setStage={setStage}
-            setResultMessage={setResultMessage}
-        />
-      </View>
+    <View>
+      <Header
+        numberOfShells={numberOfShells}
+        onStart={onStart}
+        resultMessage={resultMessage}
+        setNumberOfShells={setNumberOfShells}
+        stage={stage}
+      />
+      <GameBoard
+        currentOrder={order}
+        initialOrder={initialOrder}
+        stage={stage}
+        setStage={setStage}
+        setResultMessage={setResultMessage}
+      />
+    </View>
   );
 }
 

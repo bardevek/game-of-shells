@@ -1,13 +1,13 @@
-export const swapElements = (data, firstElement, secondElement) => {
-    return data.map(d => {
-        if (d.id === firstElement.id) {
+export const swapElements = (elements, firstElement, secondElement) => {
+    return elements.map(element => {
+        if (element.id === firstElement.id) {
             return secondElement;
         }
 
-        if (d.id === secondElement.id) {
+        if (element.id === secondElement.id) {
             return firstElement;
         }
 
-        return d;
+        return element;
     });
 };

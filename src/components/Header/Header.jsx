@@ -9,6 +9,7 @@ import {
   SelectAndInputContainer,
   Title
 } from "./StyledComponents";
+import { instruction, question } from "./messages";
 
 const Header = ({
   stage,
@@ -24,14 +25,7 @@ const Header = ({
   return (
     <HeaderContainer>
       <Title>Game of shells</Title>
-      {stage === 0 && (
-        <Instruction>
-          Under one of the containers, I hid the little red ball. When you press
-          the start button I will show you where the ball is. Then all of the
-          containers will be shuffled. Your goal is to guess where the ball is
-          hidden.
-        </Instruction>
-      )}
+      {stage === 0 && <Instruction>{instruction}</Instruction>}
       {shouldShowButtonAndInput && (
         <SelectAndInputContainer>
           <DifficultySelect
@@ -41,7 +35,7 @@ const Header = ({
           <StartButton onClick={onStart} stage={stage} />
         </SelectAndInputContainer>
       )}
-      {stage === 3 && <h2>What's your guess ?</h2>}
+      {stage === 3 && <h2>{question}</h2>}
       {stage === 4 && <h2>{resultMessage}</h2>}
     </HeaderContainer>
   );
